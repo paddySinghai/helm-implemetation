@@ -13,16 +13,16 @@ The core function of the module is to create Helm chart for deploying docker con
 
 # Useful commands
  Update the below mentioned details of the docker image in the values.yaml.
-    * repository 
-    * imagePullPolicy
-    * tag
+    1 repository 
+    2 imagePullPolicy
+    3 tag
  Then 
  <B> helm lint helm </B> to examine charts for an issues.
- For deploying the helm, use <B> helm upgrade -i helm helm <B>
+ For deploying the helm, use <B> helm upgrade -i helm helm </B>
   
  Check the installed helm using using <B> helm ls </B> and the service,deployment and pod(s) detail using <B> kubectl get all</B>
  
- Test The application using <B>  kubectl --namespace default port-forward <pod_name> 8080:80 </B>
+ Test The application using <B> kubectl --namespace default port-forward <pod_name> 8080:80 </B>
   
   # Other Useful Commands
   

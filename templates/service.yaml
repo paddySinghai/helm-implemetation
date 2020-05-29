@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "stock-mgmt-service.fullname" . }}
+  labels:
+    {{- include "stock-mgmt-service.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 8081
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "stock-mgmt-service.selectorLabels" . | nindent 4 }}

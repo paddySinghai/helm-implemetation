@@ -12,10 +12,10 @@ The core function of the module is to create Helm chart for deploying docker con
  Clone the git repository in a local directory using git clone<repository_name> command.
 
 # Useful commands
- Update the below mentioned details of the docker image in the values.yaml.
-    1 repository 
-    2 imagePullPolicy
-    3 tag
+ Update the below mentioned details of the docker image in the values.yaml.</br>
+    1 repository </br>
+    2 imagePullPolicy </br>
+    3 tag </br>
  Then 
  <B> helm lint helm </B> to examine charts for an issues.
  For deploying the helm, use <B> helm upgrade -i helm helm </B>
@@ -26,6 +26,9 @@ The core function of the module is to create Helm chart for deploying docker con
   
   # Other Useful Commands
   
-  <B> helm delete helm </B>  - deletes the helm deployment
+  <B> helm delete helm </B>  - deletes the helm deployment </br>
+  <B> helm package helm </B>  - packages the chart into .tgz file </br>
+  <B> helm status helm </B>  - shows the installation status </br>
+  <B> helm upgrade -i helm helm --set service.port=8080 </B>  - To override one of the variables(in this case service.port) insted of default installation mentioned </br>
   
   

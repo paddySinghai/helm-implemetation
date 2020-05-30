@@ -26,6 +26,7 @@ The core function of the module is to create Helm chart for deploying docker con
   
   # Other Useful Commands
   
+  <B> helm create helm </B>  - creates new helm </br>
   <B> helm delete helm </B>  - deletes the helm deployment </br>
   <B> helm package helm </B>  - packages the chart into .tgz file </br>
   <B> helm status helm </B>  - shows the installation status </br>
